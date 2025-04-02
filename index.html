@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./plugins/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+
+
+
+
+
+  <div class="all-page d-flex flex-column align-items-center justify-content-center">
+    <div class="logo text-center pt-5 pb-5">
+      <img src="./images/logo.svg" alt="">
+    </div>
+
+  <div class="splitter-container mb-5">
+    <div class="splitter-content w-75 row mt-lg-5 mt-sm-2">
+        <div class="col-lg-6 col-sm-12 splitter-left pe-5">
+          <div class="row bill pt-lg-2 pb-lg-2 pt-sm-0 pb-sm-2">
+            <div class="col-12 pt-2 pb-2">
+              <span>Bill</span>
+            </div>
+            <div class="col-12 bill-input position-relative">
+              <input id="bill" class="text-end w-100 h-100" type="text" placeholder="0">
+              <img class="position-absolute" src="./images/icon-dollar.svg" alt="">
+            </div>
+          </div>
+          <div class="row tip pt-2 pb-2">
+            <div class="col-12">
+              <span>Select Tip %</span>
+            </div>
+            <div class="col-12 pt-2 pb-2 tip-inputs">
+              <div class="row tips pt-2 pb-2 d-flex justify-content-center">
+                <span class="col-lg-3 col-4 text-center p-2" onclick="calculer_tip_amount(this)">5%</span>
+                <span class="col-lg-3 col-4 text-center p-2" onclick="calculer_tip_amount(this)">10%</span>
+                <span class="col-lg-3 col-4 text-center p-2" onclick="calculer_tip_amount(this)">15%</span>
+                <span class="col-lg-3 col-4 text-center p-2" onclick="calculer_tip_amount(this)">25%</span>
+                <span class="col-lg-3 col-4 text-center p-2" onclick="calculer_tip_amount(this)">50%</span>
+                <input class="col-lg-3 col-4" id="tipc" type="text" onkeyup="input_tip(this)" placeholder="Custom">
+              </div>
+            </div>
+          </div>
+          <div class="row number pt-lg-2 pb-lg-2 pb-5">
+            <div class="col-12 pt-2 pb-2">
+              <span>Number of People</span>
+              <label class="number-people d-none w-50 text-danger text-end">* Can't be zero</label>
+            </div>
+            <div class="col-12 number-input position-relative">
+              <input id="perssones" class="text-end w-100 h-100" type="text" placeholder="0">
+              <img class="position-absolute" src="./images/icon-person.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 splitter-right p-lg-5 p-sm-4 p-3">
+            <div class="row pb-lg-5 pb-2">
+              <div class="row tip-amount pb-4">
+                <div class="col-8">
+                  <h5>tip amount</h5>
+                  <p>/ perssone</p>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                  <img class="dollar-img me-2" src="./images/icon-dollar.svg" alt="">
+                  <span id="tip_resultat">0.00</span>
+                </div>
+              </div>
+              <div class="row total pb-4">
+                <div class="col-8">
+                  <h5>Total</h5>
+                  <p>/ perssone</p>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                  <img class="dollar-img me-2" src="./images/icon-dollar.svg" alt="">
+                  <span id="total_resultat">0.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-5">
+              <button class="text-uppercase splitter-right-btn" onclick="reset()">reset</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+  <footer class="position-fixed bottom-0 w-100 d-flex justify-content-center align-items-center">
+    <div class="attribution text-center">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/ossama2323" target="_blank">OSSAMA ARGAZ</a>.
+    </div>
+  </footer>
+
+
+
+  <script src="./plugins/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
